@@ -329,6 +329,54 @@ main.visible {
     padding: 0.25rem 0.5rem;
   }
 }
+/* HOME CONTENT ===============*/
+.home-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.home-container h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
 
 
+/* Updated Food, Drink, & Activity Cards */
+.food-card, .drink-card, .activity-card {
+  background: #fff;
+  border-radius: 12px; /* Smoother corners for a modern UI */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  text-align: center;
+  /* Smooth transition for the lift and the glow */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.3s ease;
+}
 
+/* The "Glow Up" Hover Effect */
+.food-card:hover, .drink-card:hover, .activity-card:hover {
+  transform: translateY(-8px); /* Lifts the card higher */
+  /* This creates the soft, professional glow */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12), 
+              0 0 15px rgba(144, 238, 144, 0.3); /* Uses your light green theme color for the glow! */
+}
+
+/* Image Zoom Effect */
+.food-card img, .drink-card img, .activity-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.food-card:hover img, .drink-card:hover img, .activity-card:hover img {
+  transform: scale(1.05); /* Subtle zoom when hovering */
+}
