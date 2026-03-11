@@ -1151,7 +1151,7 @@ const cards = document.querySelectorAll(".food-card.drink-card"); // Reusing the
 }
 
 function initMap(coords) {
-  // 1. SAFETY CHECK: If coords are missing or empty, stop before crashing
+  // If coords are missing or empty, stop before crashing
   if (!coords || coords.length < 2 || typeof coords[0] !== 'number') {
     console.warn("Map Error: Invalid or missing coordinates. Skipping map load.");
     if (document.getElementById("modal-map")) {
@@ -1160,18 +1160,18 @@ function initMap(coords) {
     return; 
   }
 
-  // 2. Ensure container is visible if we have data
+  // Ensure container is visible
   if (document.getElementById("modal-map")) {
     document.getElementById("modal-map").style.display = 'block';
   }
 
-  // 3. CLEANUP: Completely destroy the old map instance
+  //  Completely destroy the old map instance
   if (window.modalMap) {
     window.modalMap.remove();
     window.modalMap = null; // Tell the browser the container is now empty
   }
 
-  // 4. INITIALIZE: Create the new map
+  // Create the new map
   try {
     const [lat, lng] = coords;
     const map = L.map("modal-map", { zoomControl: false }).setView([lat, lng], 15);
