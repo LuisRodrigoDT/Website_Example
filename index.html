@@ -65,5 +65,27 @@
 
   <!-- Main Script -->
   <script src="script.js"></script>
+
+
+  <div id="food-modal" class="modal hidden">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <p id="modal-price" class="price-tier"></p>
+    <p><a id="modal-link" href="" target="_blank" rel="noopener">Visit Website</a></p>
+    <p id="modal-address" class="modal-address">
+       <a id="modal-address-link" href="" target="_blank" rel="noopener"></a>
+    </p>
+    <div id="modal-map" class="map-container"></div>
+    <div class="modal-gallery">
+      <button class="gallery-arrow prev">&#10094;</button>
+      <div id="image-spinner" class="spinner hidden"></div>
+      <img id="modal-image" src="" alt="Photo">
+      <button class="gallery-arrow next">&#10095;</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
